@@ -15,11 +15,8 @@ workflows:
           pod install
       - name: Build iOS
         script: |
-          flutter build ios --release --no-codesign
-      - name: Create .ipa File
-        script: |
-          xcodebuild -exportArchive -archivePath build/ios/iphoneos/Runner.app -exportOptionsPlist ExportOptions.plist -exportPath build/ios/ipa
-    
+          flutter build ios --release
+      
       
     artifacts:
       - build/ios/ipa/*.ipa 
