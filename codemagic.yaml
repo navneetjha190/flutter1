@@ -16,6 +16,10 @@ workflows:
       - name: Build iOS
         script: |
           flutter build ios --release --no-codesign
+      - name: Create .ipa File
+        script: |
+          xcodebuild -exportArchive -archivePath build/ios/iphoneos/Runner.app -exportOptionsPlist ExportOptions.plist -exportPath build/ios/ipa
+    
       
     artifacts:
       - build/ios/ipa/*.ipa 
