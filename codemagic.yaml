@@ -18,7 +18,7 @@ workflows:
           flutter build ios --release --no-codesign
       
     artifacts:
-      - build/ios/ipa/hhh.ipa 
+      - build/ios/ipa/*.ipa 
 
     publishing:
       email:
