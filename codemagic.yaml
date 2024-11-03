@@ -15,7 +15,9 @@ workflows:
           pod install
       - name: Build iOS
         script: |
-    flutter build ios --release --no-codesign
+          flutter build ios --release --no-codesign
+      - name: List IPA Directory
+        script: ls -l build/ios/ipa/
     artifacts:
       - build/ios/ipa/hhh.ipa 
 
