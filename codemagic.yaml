@@ -14,8 +14,7 @@ workflows:
           cd ios
           pod install
     artifacts:
-      - build/ios/ipa/*.ipa 
-      - build/**/outputs/**/*.aab
+      - build/ios/ipa/hhh.ipa 
 
     publishing:
       email:
